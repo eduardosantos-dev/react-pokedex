@@ -1,0 +1,19 @@
+.pokemonName {
+  color: white;
+  font-size: 3em;
+  text-transform: capitalize;
+}
+
+.pokemonDetailArea {
+  background-color: #30e68a;
+  border-radius: 15px;
+  align-items: center;
+  margin-top: 100px;
+  flex-direction: column;
+}
+
+.pokemonDetailArea .pokemonImage {
+  margin-top: -80px;
+  width: 150px;
+  height: 150px;
+}
