@@ -15,7 +15,7 @@ const Pokemon = props => {
       const pokemon = res.data;
       setState({ pokemon });
     });
-  }, []);
+  }, [props.pokemon.url]);
 
   const { pokemon } = state;
 

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import Img from "react-image";
 import ClipLoader from "react-spinners/ClipLoader";
-import { Row } from "react-bootstrap";
+import { Row, Button } from "react-bootstrap";
 import "./styles.css";
 import PokemonTypes from "../PokemonTypes";
 import PokemonStats from "../PokemonStats";
@@ -23,7 +23,7 @@ const PokemonDetail = ({ location }) => {
         setState({ pokemon });
       });
     }
-  }, []);
+  }, [location.state, url]);
 
   const { pokemon } = state;
   return pokemon ? (
@@ -32,7 +32,11 @@ const PokemonDetail = ({ location }) => {
         <h1 className="pokemonName">{pokemon.name}</h1>
       </Row>
       <Row className="pokemonDetailArea">
-        <span className="pull-left">⬅</span>
+        <Link to="/" style={{ alignSelf: "flex-start" }}>
+          <Button variant="danger" style={{ margin: "15px 0 0 15px" }}>
+            Voltar
+          </Button>
+        </Link>
         <Img
           className="pokemonImage"
           alt={pokemon.name}

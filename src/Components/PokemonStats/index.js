@@ -58,7 +58,6 @@ class PokemonStats extends Component {
   }
 
   render() {
-    console.log(this.state.series);
     return (
       <div className="app">
         <div className="row">
